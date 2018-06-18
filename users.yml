@@ -1,0 +1,26 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Test API
+  description: Test API
+  termsOfService: terms
+  contact:
+    name: test
+    url: 'https://example.com'
+    email: test@example.com
+paths:
+  '/users/{userId}':
+    get:
+      summary: ユーザー情報API
+      description: 指定されたuserIdの情報を返します
+      parameters:
+        - name: userId
+          in: path
+          description: 取得したいユーザーのID
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: OK
+
